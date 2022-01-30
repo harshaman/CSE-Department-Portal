@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>CSE PORTAL</title>
+    <link href="StyleSheet.css" type="text/css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="<%=ResolveUrl("~/favicon.ico")%>"/>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div id='cssmenu'>
+<ul>
+   <li><a href='Home.aspx'><span>Home</span></a></li>
+   <li><a href='register.aspx'><span>Register</span></a></li>
+   <li><a href='downloads.aspx'><span>Downloads</span></a></li>
+   <li class='last'><a href='contact.aspx'><span>Contact</span></a></li>
+</ul>
+</div>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>
+    <div id="logo">
+        <asp:Image ID="Image1" ImageUrl="~/images/manipal.gif" runat="server" Height="60px" Width="42px" />
+	    <h1><a href="Home.aspx" class="title">Computer Science And Engineering Portal </a></h1>
+    </div>
+    <div>
+        <br />
+    </div>
+    <!--banner image-->
+    <!--<div id="banner">
+    <!---->
+   <!--</div>-->
+   
+    <div>
+        <form runat="server" id="form3">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder></form>
+    </div>
+    <!--footer-->
+    <div id="footer">
+	<p id="legal">Portal designed by <a href="http://www.facebook.com/tanay.mathur" target="_blank">Tanay</a> and <a href="http://www.facebook.com/harshaman3" target="_blank">Aman</a></p>
+</div>
+</body>
+</html>
